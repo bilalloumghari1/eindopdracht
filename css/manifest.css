@@ -1,0 +1,340 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "roc-grotesk", sans-serif;
+  background-color: rgb(25, 25, 25);
+}
+
+a:visited {
+  color: inherit;
+}
+
+p {
+  color: rgb(247, 247, 247);
+  font-size: 24px;
+  margin: 0;
+  animation-name: smooth-appear;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.right-arrow-container-dark {
+  display: flex;
+  align-content: center;
+  background-color: rgb(237, 237, 237);
+  border-radius: 50px;
+  color: rgb(25, 25, 25);
+  padding: 12px 24px;
+}
+
+.right-arrow-container-dark img {
+  width: auto;
+  height: 20px;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  color: rgb(247, 247, 247);
+  background-color: rgb(25, 25, 25);
+  z-index: 10;
+}
+
+.logo {
+  padding: 12px 24px;
+  background-color: rgb(255, 69, 69);
+  font-weight: bold;
+  color: rgb(25, 25, 25);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(237, 237, 237);
+  padding: 12px 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+nav ul li a.active {
+  background-color: rgb(255, 69, 69);
+  color: rgb(25, 25, 25);
+  font-weight: bold;
+}
+
+/* AANDACHT SECTION (meldingen) */
+
+.aandacht {
+  background-color: rgb(25, 25, 25);
+  color: rgb(247, 247, 247);
+  padding: 48px;
+}
+
+.aandacht h1 {
+  font-family: "roc-grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 72px;
+  color: rgb(255, 69, 69);
+  margin: 0;
+}
+
+.meldingen {
+  margin-top: 64px;
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+}
+
+.meldingen ul {
+  width: max-content;
+  animation-name: bewegen;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 0;
+  position: relative;
+}
+
+.meldingen ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 32px;
+  font-size: 20px;
+  color: rgb(237, 237, 237);
+  background: rgb(255, 69, 69);
+  border: 1px solid rgba(16, 16, 16, 0.3);
+  font-weight: 500;
+}
+
+.meldingen-2 {
+  margin-top: 64px;
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+}
+
+.meldingen-2 ul {
+  width: max-content;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1, end);
+
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 0;
+  position: relative;
+}
+
+.meldingen-2 ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 32px;
+  font-size: 20px;
+  color: rgb(237, 237, 237);
+  background: rgb(255, 69, 69);
+  border: 1px solid rgba(16, 16, 16, 0.3);
+  font-weight: 500;
+}
+
+/* meldingen animatie*/
+
+@keyframes bewegen {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(calc(100cqw - 100%));
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 30%;
+  }
+
+  50% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 30%;
+  }
+}
+
+.cta-section {
+  padding: 24px 48px;
+}
+
+.aandacht-cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 64px;
+  width: fit-content;
+}
+
+.aandacht-cta p {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(255, 69, 69);
+  font-size: 24px;
+  font-weight: 500;
+  padding: 12px 24px;
+  line-height: 100%;
+  margin: 0;
+}
+
+.lock-icon {
+  height: 24px;
+  width: auto;
+}
+
+.lock-icon-container {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 69, 69);
+  padding: 12px 24px;
+  border-left: 3px solid rgb(25, 25, 25);
+}
+
+/*MANIFEST SECTION*/
+
+.manifest {
+  margin: 128px;
+  background-color: rgb(237, 237, 237);
+  padding: 64px 102px;
+  display: flex;
+  flex-direction: row;
+}
+
+.manifest-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.data-visualisatie {
+  padding-top: 198px;
+  display: flex;
+  flex-direction: column;
+}
+
+.visualisatie-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  gap: 24px;
+}
+
+.visualisatie-card .visualisation-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.visualisatie-card .visualisation-text h3 {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+}
+
+.visualisatie-card .visualisation-text p {
+  font-size: 12px;
+  font: 300;
+  margin: 0;
+  color: rgb(25, 25, 25);
+}
+
+.manifest h1 {
+  font-family: "Noto Serif Gurmukhi", serif;
+  font-weight: 500;
+  font-size: 48px;
+}
+
+.manifest h1 span:nth-of-type(1) {
+  color: rgb(162, 48, 48);
+}
+
+.manifest h1 span:nth-of-type(2) {
+  color: rgb(60, 155, 82);
+}
+
+.manifest-text p {
+  width: 70%;
+  font-family: "Noto Serif Gurmukhi", serif;
+  color: rgb(25, 25, 25);
+  font-weight: 100;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.blog-cta {
+  display: flex;
+  width: fit-content;
+  margin-top: 48px;
+}
+
+.blog-cta:hover .blog-cta-text,
+.blog-cta:hover .right-arrow-container-dark {
+  background-color: rgb(60, 155, 82);
+}
+
+.blog-cta-text {
+  background-color: rgb(237, 237, 237);
+  border-radius: 50px;
+  color: rgb(25, 25, 25);
+  padding: 12px 24px;
+  font-weight: 600;
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: rgb(52, 52, 52);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer p {
+  color: rgb(71, 71, 71);
+  font-size: 16px;
+}
