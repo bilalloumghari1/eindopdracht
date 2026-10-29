@@ -47,10 +47,6 @@ p {
   font-weight: 300;
   color: rgb(14, 53, 24);
   margin: 0;
-  animation: fade-up 0.5s;
-  animation-timing-function: ease;
-  animation-timeline: view();
-  animation-range: entry 0% entry 100%;
 }
 
 sup {
